@@ -1,0 +1,2493 @@
+<!DOCTYPE html>
+<html lang="en" class="light" style="background-color: #ffffff !important; color: #0f172a !important;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <title>S&amp;S Super Serve Transport Solutions | Cape Town &amp; Durban E-Hailing, Shuttles &amp; Tours</title>
+  <meta name="description" content="S&S Super Serve Transport Solutions — Reliable e-hailing rides, CPT & DUR airport shuttles, and guided scenic tours in Cape Town and Durban. Book on WhatsApp: 084 034 3702." />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Strict 100% Pure-White Light-Only Enforcement -->
+  <style>
+    :root {
+      color-scheme: light only !important;
+    }
+    html, body {
+      background-color: #ffffff !important;
+      color: #0f172a !important;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, main, section, footer, article, aside, dialog {
+      background-color: #ffffff !important;
+      color: #0f172a !important;
+    }
+    input, select, textarea {
+      background-color: #ffffff !important;
+      color: #0f172a !important;
+      color-scheme: light only !important;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    }
+    .clean-card {
+      background-color: #ffffff !important;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+    }
+    .page-view {
+      background-color: #ffffff !important;
+      animation: pageFadeIn 0.2s ease-out;
+    }
+    @keyframes pageFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <!-- Early-Loaded Logo & Scenic Image Fallback Handlers (Registered Before Body Parses) -->
+  <script>
+    let logoSvgCounter = 0;
+    function handleLogoFallback(imgEl, sizeClasses) {
+      if (!imgEl || imgEl.dataset.fallbackApplied === 'true') return;
+      imgEl.dataset.fallbackApplied = 'true';
+      logoSvgCounter += 1;
+      const uid = 'ssLogo_' + logoSvgCounter;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = (sizeClasses || 'h-14 w-auto') + ' inline-flex items-center justify-center';
+      wrapper.setAttribute('role', 'img');
+      wrapper.setAttribute('aria-label', 'S&S Super Serve Transport Solutions Emblem');
+
+      wrapper.innerHTML = `
+        <svg viewBox="0 0 360 320" class="h-full w-auto block" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="${uid}_silver" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc" />
+              <stop offset="30%" stop-color="#cbd5e1" />
+              <stop offset="55%" stop-color="#ffffff" />
+              <stop offset="80%" stop-color="#94a3b8" />
+              <stop offset="100%" stop-color="#e2e8f0" />
+            </linearGradient>
+            <linearGradient id="${uid}_navy" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#0f172a" />
+              <stop offset="55%" stop-color="#091326" />
+              <stop offset="100%" stop-color="#020617" />
+            </linearGradient>
+            <linearGradient id="${uid}_banner" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#091326" />
+              <stop offset="50%" stop-color="#1e293b" />
+              <stop offset="100%" stop-color="#091326" />
+            </linearGradient>
+          </defs>
+          <circle cx="180" cy="160" r="144" fill="url(#${uid}_silver)" stroke="#64748b" stroke-width="2" />
+          <circle cx="180" cy="160" r="133" fill="url(#${uid}_navy)" />
+          <circle cx="180" cy="160" r="124" fill="none" stroke="url(#${uid}_silver)" stroke-width="3.5" />
+          <text x="180" y="76" text-anchor="middle" fill="url(#${uid}_silver)" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="34" letter-spacing="3">
+            S&amp;S
+          </text>
+          <path d="M108 134 C118 104, 136 94, 180 94 C224 94, 242 104, 252 134 L268 142 C275 146, 277 154, 274 162 L86 162 C83 154, 85 146, 92 142 Z" fill="url(#${uid}_navy)" stroke="url(#${uid}_silver)" stroke-width="2.5" />
+          <path d="M122 128 C130 106, 144 100, 180 100 C216 100, 230 106, 238 128 C206 122, 154 122, 122 128 Z" fill="#1e293b" stroke="#94a3b8" stroke-width="1.2" />
+          <ellipse cx="101" cy="124" rx="10" ry="5" fill="#0f172a" stroke="url(#${uid}_silver)" stroke-width="1.8" />
+          <ellipse cx="259" cy="124" rx="10" ry="5" fill="#0f172a" stroke="url(#${uid}_silver)" stroke-width="1.8" />
+          <path d="M142 136 Q180 148 218 136" fill="none" stroke="url(#${uid}_silver)" stroke-width="2.2" stroke-linecap="round" />
+          <path d="M97 143 L128 152 L114 156 L94 150 Z" fill="#ffffff" />
+          <path d="M263 143 L232 152 L246 156 L266 150 Z" fill="#ffffff" />
+          <rect x="12" y="158" width="336" height="46" rx="10" fill="url(#${uid}_banner)" stroke="url(#${uid}_silver)" stroke-width="3" />
+          <text x="180" y="189" text-anchor="middle" fill="url(#${uid}_silver)" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="30" letter-spacing="2.5">
+            SUPER SERVE
+          </text>
+          <text x="180" y="223" text-anchor="middle" fill="#f8fafc" font-family="'Inter', sans-serif" font-weight="700" font-size="13" letter-spacing="3.5">
+            TRANSPORT SOLUTIONS
+          </text>
+          <path d="M104 238 Q180 278 256 238 Q180 262 104 238 Z" fill="url(#${uid}_silver)" />
+        </svg>
+      `;
+
+      imgEl.replaceWith(wrapper);
+    }
+
+    const ATTACHED_JFIF_FALLBACKS = {
+      'table-mountain': ['Gemini_Generated_Image_4fz2mi4fz2mi4fz2 (2).jfif'],
+      'golden-mile': ['Gemini_Generated_Image_4fz2mi4fz2mi4fz2 (1).jfif'],
+      'umhlanga': [
+        'Gemini_Generated_Image_4fz2mi4fz2mi4fz2.jfif',
+        'Gemini_Generated_Image_4fz2mi4fz2mi4fz2 (3).jfif'
+      ],
+      'chapmans-peak': [],
+      'kirstenbosch': [],
+      'valley-hills': []
+    };
+
+    function handleTourImageError(imgEl, sceneKey, heightClass) {
+      if (!imgEl || imgEl.dataset.fallbackApplied === 'true') return;
+
+      const fallbacks = ATTACHED_JFIF_FALLBACKS[sceneKey] || [];
+      const currentStep = parseInt(imgEl.dataset.fallbackStep || '0', 10);
+
+      if (currentStep < fallbacks.length) {
+        imgEl.dataset.fallbackStep = String(currentStep + 1);
+        imgEl.src = fallbacks[currentStep];
+        return;
+      }
+
+      imgEl.dataset.fallbackApplied = 'true';
+      renderScenicSvgFallback(imgEl, sceneKey, heightClass);
+    }
+
+    function handleScenicFallback(imgEl, sceneKey, heightClass) {
+      handleTourImageError(imgEl, sceneKey, heightClass);
+    }
+
+    function renderScenicSvgFallback(imgEl, sceneKey, heightClass) {
+      const scenes = {
+        'table-mountain': `
+          <svg viewBox="0 0 600 240" class="w-full ${heightClass} object-cover block" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bright daylight Table Mountain, Bo-Kaap facades, and V&A Waterfront harbour without people">
+            <defs>
+              <linearGradient id="tmSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bae6fd" />
+                <stop offset="100%" stop-color="#f0f9ff" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="240" fill="url(#tmSky)" />
+            <circle cx="520" cy="44" r="22" fill="#fde047" />
+            <ellipse cx="115" cy="48" rx="46" ry="13" fill="#ffffff" />
+            <polygon points="40,165 110,96 165,165" fill="#94a3b8" />
+            <polygon points="145,165 195,84 405,84 465,165" fill="#64748b" />
+            <polygon points="415,165 475,92 545,165" fill="#94a3b8" />
+            <rect x="195" y="81" width="210" height="8" rx="4" fill="#ffffff" opacity="0.9" />
+            <rect x="28" y="136" width="44" height="44" rx="2" fill="#f472b6" />
+            <rect x="76" y="132" width="44" height="48" rx="2" fill="#38bdf8" />
+            <rect x="124" y="138" width="44" height="42" rx="2" fill="#facc15" />
+            <rect x="172" y="134" width="44" height="46" rx="2" fill="#4ade80" />
+            <rect x="0" y="176" width="600" height="64" fill="#0ea5e9" opacity="0.35" />
+            <path d="M0 192 Q150 184 300 194 T600 188 L600 240 L0 240 Z" fill="#38bdf8" opacity="0.55" />
+            <polygon points="390,174 390,144 412,174" fill="#ffffff" />
+            <path d="M380 175 L420 175 L414 182 L386 182 Z" fill="#1d4ed8" />
+            <polygon points="480,176 480,150 498,176" fill="#ffffff" />
+            <path d="M472 177 L506 177 L501 183 L477 183 Z" fill="#0f172a" />
+          </svg>
+        `,
+        'chapmans-peak': `
+          <svg viewBox="0 0 600 240" class="w-full ${heightClass} object-cover block" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chapman's Peak Drive coastal cliffs and turquoise Atlantic waves without people">
+            <defs>
+              <linearGradient id="cpSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7dd3fc" />
+                <stop offset="100%" stop-color="#e0f2fe" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="240" fill="url(#cpSky)" />
+            <circle cx="495" cy="46" r="24" fill="#facc15" />
+            <ellipse cx="335" cy="48" rx="48" ry="13" fill="#ffffff" />
+            <rect x="210" y="142" width="390" height="98" fill="#06b6d4" opacity="0.45" />
+            <path d="M230 168 Q380 156 600 172 L600 240 L210 240 Z" fill="#38bdf8" opacity="0.6" />
+            <path d="M290 205 Q430 192 600 202 L600 240 L270 240 Z" fill="#fef08a" />
+            <polygon points="0,42 155,78 265,172 325,240 0,240" fill="#475569" />
+            <polygon points="0,84 135,112 225,192 260,240 0,240" fill="#16a34a" opacity="0.55" />
+            <path d="M0 144 Q115 148 188 186 T285 240" fill="none" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round" />
+            <path d="M0 144 Q115 148 188 186 T285 240" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,6" />
+          </svg>
+        `,
+        'kirstenbosch': `
+          <svg viewBox="0 0 600 240" class="w-full ${heightClass} object-cover block" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kirstenbosch Botanical Gardens, Boomslang canopy walkway, and Table Mountain slopes without people">
+            <defs>
+              <linearGradient id="kbSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bae6fd" />
+                <stop offset="100%" stop-color="#f0f9ff" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="240" fill="url(#kbSky)" />
+            <circle cx="95" cy="46" r="22" fill="#fde047" />
+            <polygon points="120,165 215,62 455,62 560,165" fill="#64748b" />
+            <polygon points="155,165 235,98 430,98 510,165" fill="#22c55e" opacity="0.45" />
+            <circle cx="90" cy="166" r="46" fill="#22c55e" />
+            <circle cx="175" cy="158" r="52" fill="#16a34a" />
+            <circle cx="275" cy="162" r="54" fill="#4ade80" />
+            <circle cx="380" cy="158" r="50" fill="#16a34a" />
+            <circle cx="485" cy="164" r="52" fill="#22c55e" />
+            <path d="M60 162 Q295 112 535 158" fill="none" stroke="#d97706" stroke-width="6" stroke-linecap="round" />
+            <path d="M60 157 Q295 107 535 153" fill="none" stroke="#fef3c7" stroke-width="2" />
+            <path d="M0 185 Q300 172 600 186 L600 240 L0 240 Z" fill="#86efac" />
+          </svg>
+        `,
+        'golden-mile': `
+          <svg viewBox="0 0 600 240" class="w-full ${heightClass} object-cover block" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Durban Golden Mile beachfront and Moses Mabhida Stadium arch in bright daylight without people">
+            <defs>
+              <linearGradient id="gmSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7dd3fc" />
+                <stop offset="100%" stop-color="#f0f9ff" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="240" fill="url(#gmSky)" />
+            <circle cx="515" cy="44" r="24" fill="#facc15" />
+            <ellipse cx="120" cy="48" rx="44" ry="12" fill="#ffffff" />
+            <ellipse cx="275" cy="146" rx="115" ry="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+            <path d="M145 148 Q275 34 405 148" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" />
+            <path d="M145 148 Q275 34 405 148" fill="none" stroke="#cbd5e1" stroke-width="2" />
+            <rect x="0" y="158" width="600" height="36" fill="#0ea5e9" opacity="0.5" />
+            <path d="M0 174 Q180 166 360 176 T600 170 L600 202 L0 202 Z" fill="#38bdf8" opacity="0.7" />
+            <path d="M0 190 Q240 182 600 192 L600 240 L0 240 Z" fill="#fde68a" />
+            <rect x="54" y="132" width="5" height="62" fill="#92400e" />
+            <path d="M56 132 Q32 122 22 136 M56 132 Q80 122 90 136 M56 132 Q36 112 28 120 M56 132 Q76 112 84 120" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" />
+          </svg>
+        `,
+        'valley-hills': `
+          <svg viewBox="0 0 600 240" class="w-full ${heightClass} object-cover block" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Valley of a Thousand Hills lush green mountains and winding Umgeni River without people">
+            <defs>
+              <linearGradient id="vhSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bae6fd" />
+                <stop offset="100%" stop-color="#f0f9ff" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="240" fill="url(#vhSky)" />
+            <circle cx="310" cy="44" r="24" fill="#fde047" />
+            <ellipse cx="145" cy="50" rx="46" ry="13" fill="#ffffff" />
+            <ellipse cx="475" cy="46" rx="44" ry="12" fill="#ffffff" />
+            <path d="M0 132 Q110 82 220 128 T440 118 T600 134 L600 240 L0 240 Z" fill="#86efac" />
+            <path d="M0 154 Q150 106 300 152 T600 142 L600 240 L0 240 Z" fill="#4ade80" />
+            <path d="M240 156 Q340 168 275 186 T365 218 L415 218 Q315 196 365 182 T270 156 Z" fill="#38bdf8" />
+            <path d="M0 176 Q140 134 285 184 L0 212 Z" fill="#22c55e" />
+            <path d="M335 186 Q475 138 600 174 L600 216 Z" fill="#16a34a" opacity="0.85" />
+            <path d="M0 202 Q260 186 600 208 L600 240 L0 240 Z" fill="#15803d" opacity="0.8" />
+          </svg>
+        `,
+        'umhlanga': `
+          <svg viewBox="0 0 600 240" class="w-full ${heightClass} object-cover block" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Red-and-white Umhlanga Rocks Lighthouse and Whalebone Pier over blue Indian Ocean without people">
+            <defs>
+              <linearGradient id="umSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7dd3fc" />
+                <stop offset="100%" stop-color="#f0f9ff" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="240" fill="url(#umSky)" />
+            <circle cx="495" cy="46" r="23" fill="#fde047" />
+            <ellipse cx="320" cy="48" rx="46" ry="12" fill="#ffffff" />
+            <rect x="0" y="148" width="600" height="54" fill="#0ea5e9" opacity="0.55" />
+            <path d="M0 184 Q280 174 600 192 L600 240 L0 240 Z" fill="#fef08a" />
+            <path d="M235 176 L465 162" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" />
+            <path d="M285 173 Q315 134 345 169" fill="none" stroke="#ffffff" stroke-width="4" />
+            <path d="M345 169 Q375 130 405 165" fill="none" stroke="#ffffff" stroke-width="4" />
+            <rect x="132" y="72" width="32" height="108" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+            <rect x="132" y="96" width="32" height="24" fill="#dc2626" />
+            <rect x="132" y="142" width="32" height="24" fill="#dc2626" />
+            <rect x="126" y="66" width="44" height="7" rx="2" fill="#1e293b" />
+            <polygon points="130,66 148,48 166,66" fill="#dc2626" />
+            <ellipse cx="148" cy="184" rx="58" ry="14" fill="#64748b" />
+            <circle cx="72" cy="176" r="28" fill="#22c55e" />
+          </svg>
+        `
+      };
+
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = (scenes[sceneKey] || scenes['table-mountain']).trim();
+      imgEl.replaceWith(wrapper.firstElementChild);
+    }
+  </script>
+</head>
+<body class="font-sans antialiased overflow-x-hidden min-h-screen flex flex-col" style="background-color: #ffffff !important; color: #0f172a !important;">
+
+  <!-- =====================================================================
+       STICKY PURE-WHITE TOP NAVIGATION BAR
+       - Left: Uncropped logo.jpg with circular silver-and-navy SVG emblem fallback
+       - Center: 5 clean page links (Home, Services, Tours, Book a Ride, Careers)
+       - Right: Emerald-green WhatsApp Us CTA + mobile drawer toggle
+  ====================================================================== -->
+  <header class="sticky top-0 z-50 border-b border-slate-200" style="background-color: #ffffff !important; color: #0f172a !important;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 sm:h-24 gap-4">
+
+        <!-- Left: Brand Logo (Uncropped logo.jpg + SVG Emblem Fallback) -->
+        <a href="#home" data-route="home" class="route-link flex items-center gap-3 focus:outline-none flex-shrink-0" aria-label="S&S Super Serve Transport Solutions Home">
+          <img
+            src="logo.jpg"
+            alt="S&S Super Serve Transport Solutions Logo"
+            class="h-14 sm:h-16 w-auto object-contain block"
+            style="background-color: #ffffff;"
+            onerror="handleLogoFallback(this, 'h-14 sm:h-16 w-auto')"
+          />
+          <div class="hidden sm:block leading-tight">
+            <div class="font-heading font-extrabold text-sm tracking-tight" style="color: #0f172a;">S&amp;S SUPER SERVE</div>
+            <div class="text-[11px] font-medium" style="color: #475569;">Cape Town &amp; Durban</div>
+          </div>
+        </a>
+
+        <!-- Center: 5 Clean Multi-Page Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1.5" style="background-color: #ffffff !important;" aria-label="Primary Page Navigation">
+          <a href="#home" data-route="home" class="nav-tab route-link px-3.5 py-2 rounded-xl text-sm font-semibold transition-colors">
+            Home
+          </a>
+          <a href="#services" data-route="services" class="nav-tab route-link px-3.5 py-2 rounded-xl text-sm font-semibold transition-colors">
+            Services
+          </a>
+          <a href="#tours" data-route="tours" class="nav-tab route-link px-3.5 py-2 rounded-xl text-sm font-semibold transition-colors">
+            Tours
+          </a>
+          <a href="#book" data-route="book" class="nav-tab route-link px-3.5 py-2 rounded-xl text-sm font-semibold transition-colors">
+            Book a Ride
+          </a>
+          <a href="#careers" data-route="careers" class="nav-tab route-link px-3.5 py-2 rounded-xl text-sm font-semibold transition-colors inline-flex items-center gap-1.5">
+            <span>Careers</span>
+            <span class="px-2 py-0.5 text-[11px] font-semibold rounded-full" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+              Hiring
+            </span>
+          </a>
+        </nav>
+
+        <!-- Right: Direct WhatsApp CTA + Mobile Hamburger Toggle -->
+        <div class="flex items-center gap-2.5">
+          <a
+            href="https://wa.me/27840343702"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="background-color: #16a34a; color: #ffffff;"
+            class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm hover:opacity-95 transition-opacity"
+          >
+            <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.477 1.332 4.992L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.262h.004c5.515 0 9.969-4.454 9.969-9.969 0-2.664-1.037-5.168-2.921-7.051A9.903 9.903 0 0 0 12.031 2zm5.816 14.273c-.246.691-1.434 1.324-1.988 1.406-.512.078-1.16.109-1.871-.117-.434-.137-.988-.32-1.699-.629-2.988-1.289-4.938-4.301-5.086-4.5-.148-.199-1.215-1.617-1.215-3.086 0-1.469.77-2.191 1.043-2.488.273-.297.598-.371.797-.371.199 0 .398.004.574.012.184.008.43-.07.672.512.246.598.844 2.063.918 2.211.074.148.125.324.023.523-.098.199-.148.324-.297.496-.148.176-.312.391-.445.523-.148.148-.305.309-.133.605.176.297.777 1.281 1.668 2.074 1.148 1.023 2.113 1.34 2.41 1.488.297.148.473.125.648-.074.176-.199.746-.871.945-1.168.199-.297.398-.246.672-.148.273.098 1.742.82 2.039.969.297.148.496.223.57.348.074.125.074.723-.172 1.414z"/>
+            </svg>
+            <span>WhatsApp Us</span>
+          </a>
+
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Open Navigation Menu"
+            aria-expanded="false"
+            style="background-color: #ffffff; border: 1px solid #e2e8f0; color: #0f172a;"
+            class="lg:hidden p-2.5 rounded-xl hover:border-blue-700 transition-colors"
+          >
+            <svg id="menuIconOpen" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menuIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer (Pure White) -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 px-4 pt-3 pb-5 space-y-1.5" style="background-color: #ffffff !important;">
+      <a href="#home" data-route="home" class="mobile-nav-tab route-link block px-4 py-3 rounded-xl text-sm font-semibold">Home</a>
+      <a href="#services" data-route="services" class="mobile-nav-tab route-link block px-4 py-3 rounded-xl text-sm font-semibold">Services</a>
+      <a href="#tours" data-route="tours" class="mobile-nav-tab route-link block px-4 py-3 rounded-xl text-sm font-semibold">Tours</a>
+      <a href="#book" data-route="book" class="mobile-nav-tab route-link block px-4 py-3 rounded-xl text-sm font-semibold">Book a Ride</a>
+      <a href="#careers" data-route="careers" class="mobile-nav-tab route-link flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold">
+        <span>Careers</span>
+        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">Hiring</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       MAIN MULTI-PAGE VIEWPORT (100% PURE WHITE)
+  ====================================================================== -->
+  <main class="flex-grow" style="background-color: #ffffff !important; color: #0f172a !important;">
+
+    <!-- ===================================================================
+         PAGE 1: HOME (#home)
+    ==================================================================== -->
+    <section id="page-home" data-page="home" class="page-view py-12 sm:py-20" style="background-color: #ffffff !important;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+        <!-- 2-Column Hero -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+              Cape Town &amp; Durban • E-Hailing, Shuttles &amp; Tours
+            </span>
+
+            <h1 class="font-heading text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.15]" style="color: #0f172a;">
+              Reliable Rides, Airport Shuttles &amp; Scenic Tours in Cape Town &amp; Durban
+            </h1>
+
+            <p class="text-base sm:text-lg leading-relaxed max-w-2xl" style="color: #475569;">
+              S&amp;S Super Serve Transport Solutions connects commuters, travellers, and holidaymakers across the Western Cape and KwaZulu-Natal with punctual e-hailing, flight-monitored CPT &amp; DUR airport transfers, and private coastal &amp; mountain tours.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
+              <a
+                href="#book"
+                data-route="book"
+                style="background-color: #1d4ed8; color: #ffffff;"
+                class="route-link inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+              >
+                Book a Ride
+              </a>
+              <a
+                href="#tours"
+                data-route="tours"
+                style="background-color: #ffffff; border: 1px solid #cbd5e1; color: #0f172a;"
+                class="route-link inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-sm hover:border-blue-700 transition-colors"
+              >
+                Explore Cape Town &amp; Durban Tours
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Service & Fleet Guarantee Brand Showcase Card -->
+          <div class="lg:col-span-5">
+            <div class="clean-card rounded-2xl p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col items-center text-center border-b border-slate-100 pb-5">
+                <img
+                  src="logo.jpg"
+                  alt="S&S Super Serve Transport Solutions Logo"
+                  class="h-24 w-auto object-contain block mb-3"
+                  style="background-color: #ffffff;"
+                  onerror="handleLogoFallback(this, 'h-24 w-auto mx-auto mb-3')"
+                />
+                <div class="font-heading font-extrabold text-base" style="color: #0f172a;">Service &amp; Fleet Guarantee</div>
+                <div class="text-xs mt-0.5" style="color: #475569;">Verified Coastal &amp; City Transport Partner</div>
+              </div>
+
+              <div class="space-y-3.5 text-sm">
+                <div class="flex items-center justify-between gap-2 py-1.5 border-b border-slate-100">
+                  <span style="color: #475569;">Operating Cities</span>
+                  <span class="font-semibold" style="color: #0f172a;">Cape Town &amp; Durban</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 py-1.5 border-b border-slate-100">
+                  <span style="color: #475569;">Airports Covered</span>
+                  <span class="font-semibold" style="color: #0f172a;">CPT &amp; DUR Terminals</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 py-1.5 border-b border-slate-100">
+                  <span style="color: #475569;">Driver Credentials</span>
+                  <span class="font-semibold" style="color: #0f172a;">Licensed PDP &amp; Code 10</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 py-1.5">
+                  <span style="color: #475569;">24/7 WhatsApp Dispatch</span>
+                  <a href="https://wa.me/27840343702" target="_blank" rel="noopener noreferrer" class="font-bold hover:underline" style="color: #16a34a;">
+                    084 034 3702
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- "Why Ride With S&S Super Serve" 3-Column Clean White Grid -->
+        <div class="space-y-8">
+          <div class="max-w-2xl">
+            <span class="text-xs font-semibold uppercase tracking-wider" style="color: #1d4ed8;">Trusted Local Mobility</span>
+            <h2 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1" style="color: #0f172a;">
+              Why Ride With S&amp;S Super Serve
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="clean-card rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color: #eff6ff; color: #1d4ed8;">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <h3 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">Door-to-Door E-Hailing</h3>
+                <p class="text-sm leading-relaxed" style="color: #475569;">
+                  Fast, dependable pickups across Cape Town's City Bowl &amp; Atlantic Seaboard and Durban's Umhlanga, Berea &amp; Beachfront suburbs.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100">
+                <a href="#services" data-route="services" class="route-link text-sm font-semibold hover:underline" style="color: #1d4ed8;">
+                  Explore E-Hailing →
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="clean-card rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color: #eff6ff; color: #1d4ed8;">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                  </svg>
+                </div>
+                <h3 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">Punctual Airport Transfers (CPT &amp; DUR)</h3>
+                <p class="text-sm leading-relaxed" style="color: #475569;">
+                  Flight-tracked arrivals and on-schedule hotel drop-offs at Cape Town International Airport (CPT) and King Shaka International Airport (DUR).
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100">
+                <button
+                  type="button"
+                  data-preselect-service="airport"
+                  class="book-service-btn text-sm font-semibold hover:underline"
+                  style="color: #1d4ed8;"
+                >
+                  Calculate Airport Fare →
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="clean-card rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color: #eff6ff; color: #1d4ed8;">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">Private Scenic Sightseeing</h3>
+                <p class="text-sm leading-relaxed" style="color: #475569;">
+                  Unrushed half-day and full-day private charters to Table Mountain, Chapman's Peak, Durban's Golden Mile, and Umhlanga Rocks.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100">
+                <a href="#tours" data-route="tours" class="route-link text-sm font-semibold hover:underline" style="color: #1d4ed8;">
+                  View All Tours →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Cape Town & Durban Destinations Preview (4 Clean Cards, Linked to #tours & #book) -->
+        <div class="space-y-8">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider" style="color: #1d4ed8;">Scenic Day Routes</span>
+              <h2 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1" style="color: #0f172a;">
+                Featured Cape Town &amp; Durban Destinations
+              </h2>
+            </div>
+            <a
+              href="#tours"
+              data-route="tours"
+              style="background-color: #ffffff; border: 1px solid #cbd5e1; color: #0f172a;"
+              class="route-link inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-semibold text-sm hover:border-blue-700 transition-colors self-start sm:self-auto"
+            >
+              View All Cape Town &amp; Durban Tours
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Featured 1: Table Mountain -->
+            <div class="clean-card rounded-2xl p-4 flex flex-col justify-between">
+              <div>
+                <a href="#tours" data-route="tours" class="route-link block rounded-xl overflow-hidden border border-slate-200 mb-3.5" style="background-color: #f0f9ff;">
+                  <img
+                    src="ct-table-mountain.jpg"
+                    alt="Table Mountain and V&A Waterfront sunny landscape without people"
+                    class="w-full h-36 object-cover block"
+                    onerror="handleTourImageError(this, 'table-mountain', 'h-36')"
+                  />
+                </a>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold" style="background-color: #eff6ff; color: #1d4ed8;">
+                  Cape Town
+                </span>
+                <h3 class="font-heading font-bold text-base mt-2" style="color: #0f172a;">Table Mountain &amp; V&amp;A Waterfront</h3>
+                <p class="text-xs mt-1 leading-relaxed" style="color: #475569;">Signal Hill views, Bo-Kaap streets &amp; harbour marina.</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                <span class="font-bold text-xs" style="color: #0f172a;">R1,350</span>
+                <div class="flex items-center gap-3">
+                  <a href="#tours" data-route="tours" class="route-link text-xs font-semibold hover:underline" style="color: #475569;">Details</a>
+                  <button
+                    type="button"
+                    data-tour-name="Table Mountain & V&A Waterfront Scenic Tour"
+                    data-tour-city="Cape Town"
+                    data-tour-rate="1350"
+                    class="select-tour-btn text-xs font-bold hover:underline"
+                    style="color: #1d4ed8;"
+                  >
+                    Book →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured 2: Chapman's Peak Drive -->
+            <div class="clean-card rounded-2xl p-4 flex flex-col justify-between">
+              <div>
+                <a href="#tours" data-route="tours" class="route-link block rounded-xl overflow-hidden border border-slate-200 mb-3.5" style="background-color: #f0f9ff;">
+                  <img
+                    src="ct-chapmans-peak.jpg"
+                    alt="Chapman's Peak Drive coastal cliffs and ocean without people"
+                    class="w-full h-36 object-cover block"
+                    onerror="handleTourImageError(this, 'chapmans-peak', 'h-36')"
+                  />
+                </a>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold" style="background-color: #eff6ff; color: #1d4ed8;">
+                  Cape Town
+                </span>
+                <h3 class="font-heading font-bold text-base mt-2" style="color: #0f172a;">Chapman's Peak &amp; Cape Peninsula</h3>
+                <p class="text-xs mt-1 leading-relaxed" style="color: #475569;">Cliffside coastal pass, Hout Bay &amp; Cape Point reserve.</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                <span class="font-bold text-xs" style="color: #0f172a;">R1,850</span>
+                <div class="flex items-center gap-3">
+                  <a href="#tours" data-route="tours" class="route-link text-xs font-semibold hover:underline" style="color: #475569;">Details</a>
+                  <button
+                    type="button"
+                    data-tour-name="Chapman's Peak Drive & Cape Peninsula Route"
+                    data-tour-city="Cape Town"
+                    data-tour-rate="1850"
+                    class="select-tour-btn text-xs font-bold hover:underline"
+                    style="color: #1d4ed8;"
+                  >
+                    Book →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured 3: Durban Golden Mile -->
+            <div class="clean-card rounded-2xl p-4 flex flex-col justify-between">
+              <div>
+                <a href="#tours" data-route="tours" class="route-link block rounded-xl overflow-hidden border border-slate-200 mb-3.5" style="background-color: #f0f9ff;">
+                  <img
+                    src="dbn-golden-mile.jpg"
+                    alt="Durban Golden Mile beach and Moses Mabhida Stadium arch without people"
+                    class="w-full h-36 object-cover block"
+                    onerror="handleTourImageError(this, 'golden-mile', 'h-36')"
+                  />
+                </a>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold" style="background-color: #f0fdf4; color: #16a34a;">
+                  Durban
+                </span>
+                <h3 class="font-heading font-bold text-base mt-2" style="color: #0f172a;">Golden Mile &amp; Moses Mabhida</h3>
+                <p class="text-xs mt-1 leading-relaxed" style="color: #475569;">Indian Ocean promenade, iconic arch &amp; Point Waterfront.</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                <span class="font-bold text-xs" style="color: #0f172a;">R1,150</span>
+                <div class="flex items-center gap-3">
+                  <a href="#tours" data-route="tours" class="route-link text-xs font-semibold hover:underline" style="color: #475569;">Details</a>
+                  <button
+                    type="button"
+                    data-tour-name="Durban Golden Mile, Moses Mabhida & Point Waterfront"
+                    data-tour-city="Durban"
+                    data-tour-rate="1150"
+                    class="select-tour-btn text-xs font-bold hover:underline"
+                    style="color: #1d4ed8;"
+                  >
+                    Book →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured 4: Umhlanga Rocks Lighthouse -->
+            <div class="clean-card rounded-2xl p-4 flex flex-col justify-between">
+              <div>
+                <a href="#tours" data-route="tours" class="route-link block rounded-xl overflow-hidden border border-slate-200 mb-3.5" style="background-color: #f0f9ff;">
+                  <img
+                    src="dbn-umhlanga.jpg"
+                    alt="Umhlanga Rocks Lighthouse and Whalebone Pier scenic coastline without people"
+                    class="w-full h-36 object-cover block"
+                    onerror="handleTourImageError(this, 'umhlanga', 'h-36')"
+                  />
+                </a>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold" style="background-color: #f0fdf4; color: #16a34a;">
+                  Durban
+                </span>
+                <h3 class="font-heading font-bold text-base mt-2" style="color: #0f172a;">Umhlanga Lighthouse &amp; North Coast</h3>
+                <p class="text-xs mt-1 leading-relaxed" style="color: #475569;">Red-and-white lighthouse, Whalebone Pier &amp; coastal forest.</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                <span class="font-bold text-xs" style="color: #0f172a;">R1,100</span>
+                <div class="flex items-center gap-3">
+                  <a href="#tours" data-route="tours" class="route-link text-xs font-semibold hover:underline" style="color: #475569;">Details</a>
+                  <button
+                    type="button"
+                    data-tour-name="Umhlanga Rocks Lighthouse & North Coast Scenic Tour"
+                    data-tour-city="Durban"
+                    data-tour-rate="1100"
+                    class="select-tour-btn text-xs font-bold hover:underline"
+                    style="color: #1d4ed8;"
+                  >
+                    Book →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PAGE 2: SERVICES (#services)
+    ==================================================================== -->
+    <section id="page-services" data-page="services" class="page-view hidden py-12 sm:py-20" style="background-color: #ffffff !important;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+        <!-- Page Header & City Selector Tabs -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div class="max-w-2xl space-y-3">
+            <span class="inline-block px-3.5 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+              Cape Town &amp; Durban Services
+            </span>
+            <h1 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #0f172a;">
+              Transport Solutions Tailored to Your Route
+            </h1>
+            <p class="text-base" style="color: #475569;">
+              Filter by city below to view local coverage across Cape Town and Durban, or click any service to pre-fill your fare estimate.
+            </p>
+          </div>
+
+          <!-- City Selector Tabs -->
+          <div class="inline-flex p-1.5 rounded-xl self-start" style="background-color: #f8fafc; border: 1px solid #e2e8f0;" role="tablist" aria-label="Filter Services by City">
+            <button
+              type="button"
+              role="tab"
+              data-service-city="all"
+              aria-selected="true"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="service-city-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all"
+            >
+              All Locations
+            </button>
+            <button
+              type="button"
+              role="tab"
+              data-service-city="Cape Town"
+              aria-selected="false"
+              style="background-color: transparent; color: #475569;"
+              class="service-city-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all"
+            >
+              Cape Town
+            </button>
+            <button
+              type="button"
+              role="tab"
+              data-service-city="Durban"
+              aria-selected="false"
+              style="background-color: transparent; color: #475569;"
+              class="service-city-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all"
+            >
+              Durban
+            </button>
+          </div>
+        </div>
+
+        <!-- Local Service Coverage Banner (Updates per City Tab) -->
+        <div class="clean-card rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4" style="background-color: #f8fafc !important;">
+          <div class="space-y-1">
+            <div id="serviceCoverageBadge" class="text-xs font-bold uppercase tracking-wider" style="color: #1d4ed8;">
+              Western Cape &amp; KwaZulu-Natal Coverage
+            </div>
+            <p id="serviceCoverageText" class="text-sm" style="color: #0f172a;">
+              Serving Cape Town (City Bowl, Sea Point, Waterfront, Camps Bay, CPT Airport) and Durban (Umhlanga, Berea, Durban Beachfront, Westville, DUR Airport).
+            </p>
+          </div>
+          <span class="px-3 py-1.5 rounded-xl text-xs font-semibold flex-shrink-0" style="background-color: #ffffff; border: 1px solid #e2e8f0; color: #0f172a;">
+            24/7 Dispatch: 084 034 3702
+          </span>
+        </div>
+
+        <!-- 3 Clean Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Service 1: Daily E-Hailing & City Transfers -->
+          <article class="clean-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-5">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background-color: #eff6ff; color: #1d4ed8;">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                  From R120
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-xl mb-2" style="color: #0f172a;">Daily E-Hailing &amp; City Transfers</h2>
+              <p id="serviceDesc1" class="text-sm leading-relaxed mb-5" style="color: #475569;">
+                Fast, safe door-to-door trips across Cape Town City Bowl, Sea Point, Waterfront, Umhlanga, Durban Berea &amp; Beachfront.
+              </p>
+
+              <ul class="space-y-2.5 text-sm border-t border-slate-100 pt-4" style="color: #0f172a;">
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span id="serviceBullet1">Cape Town City Bowl, Sea Point &amp; Waterfront</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span id="serviceBullet2">Durban Umhlanga, Berea &amp; Beachfront</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span>Upfront ZAR fare estimate before pickup</span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-preselect-service="ehailing"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="book-service-btn mt-7 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Book This Service
+            </button>
+          </article>
+
+          <!-- Service 2: Airport Shuttles — CPT & DUR -->
+          <article class="clean-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-5">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background-color: #eff6ff; color: #1d4ed8;">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                  From R350
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-xl mb-2" style="color: #0f172a;">Airport Shuttles — CPT &amp; DUR</h2>
+              <p id="serviceDesc2" class="text-sm leading-relaxed mb-5" style="color: #475569;">
+                Flight-tracked meet &amp; greet at Cape Town International Airport (CPT) &amp; King Shaka International Airport (DUR).
+              </p>
+
+              <ul class="space-y-2.5 text-sm border-t border-slate-100 pt-4" style="color: #0f172a;">
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span id="serviceAirportBullet1">Cape Town International Airport (CPT) transfers</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span id="serviceAirportBullet2">King Shaka International Airport (DUR) transfers</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span>Generous luggage capacity &amp; Code 10 group vans</span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-preselect-service="airport"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="book-service-btn mt-7 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Book This Service
+            </button>
+          </article>
+
+          <!-- Service 3: Private Tourism & Chauffeur Hire -->
+          <article class="clean-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-5">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background-color: #eff6ff; color: #1d4ed8;">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                  From R1,100
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-xl mb-2" style="color: #0f172a;">Private Tourism &amp; Chauffeur Hire</h2>
+              <p id="serviceDesc3" class="text-sm leading-relaxed mb-5" style="color: #475569;">
+                Half-day &amp; full-day private vehicles with local Cape Town and Durban route knowledge and zero rush.
+              </p>
+
+              <ul class="space-y-2.5 text-sm border-t border-slate-100 pt-4" style="color: #0f172a;">
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span>Half-day &amp; full-day custom coastal itineraries</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span>Experienced PDP-certified local tour drivers</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="font-bold" style="color: #1d4ed8;">✓</span>
+                  <span>Flexible photo stops at major viewpoints</span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-preselect-service="tourism"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="book-service-btn mt-7 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Book This Service
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PAGE 3: CAPE TOWN & DURBAN TOURS (#tours)
+         - Filter pills: All Tours (6), Cape Town (3), Durban (3)
+         - Linked relative filenames + bright daylight people-free SVG fallbacks
+    ==================================================================== -->
+    <section id="page-tours" data-page="tours" class="page-view hidden py-12 sm:py-20" style="background-color: #ffffff !important;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+        <!-- Page Header & Filter Pills -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div class="max-w-2xl space-y-3">
+            <span class="inline-block px-3.5 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+              Cape Town &amp; Durban Sightseeing
+            </span>
+            <h1 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #0f172a;">
+              Curated Cape Town &amp; Durban Tours
+            </h1>
+            <p class="text-base" style="color: #475569;">
+              Discover South Africa's most iconic coastal drives, mountain landmarks, and botanical reserves in private, air-conditioned comfort.
+            </p>
+          </div>
+
+          <!-- Interactive Filter Pills -->
+          <div class="inline-flex flex-wrap gap-2" role="tablist" aria-label="Filter Tours by City">
+            <button
+              type="button"
+              role="tab"
+              data-tour-filter="all"
+              aria-selected="true"
+              style="background-color: #1d4ed8; color: #ffffff; border: 1px solid #1d4ed8;"
+              class="tour-filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all"
+            >
+              All Tours (6)
+            </button>
+            <button
+              type="button"
+              role="tab"
+              data-tour-filter="Cape Town"
+              aria-selected="false"
+              style="background-color: #f8fafc; color: #475569; border: 1px solid #e2e8f0;"
+              class="tour-filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all"
+            >
+              Cape Town (3)
+            </button>
+            <button
+              type="button"
+              role="tab"
+              data-tour-filter="Durban"
+              aria-selected="false"
+              style="background-color: #f8fafc; color: #475569; border: 1px solid #e2e8f0;"
+              class="tour-filter-pill px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all"
+            >
+              Durban (3)
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 Tour Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- TOUR 1: [Cape Town] Table Mountain & V&A Waterfront Scenic Tour -->
+          <article class="tour-card clean-card rounded-2xl p-6 flex flex-col justify-between" data-tour-city="Cape Town">
+            <div>
+              <div class="rounded-xl overflow-hidden border border-slate-200 mb-5" style="background-color: #f0f9ff;">
+                <img
+                  src="ct-table-mountain.jpg"
+                  alt="Sunny daylight view of Table Mountain, Bo-Kaap colorful facades, and V&A Waterfront harbor without people"
+                  class="w-full h-44 object-cover block"
+                  onerror="handleTourImageError(this, 'table-mountain', 'h-44')"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                  Cape Town • Half-Day / Full-Day
+                </span>
+                <span class="font-heading font-extrabold text-base" style="color: #0f172a;">
+                  R1,350
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">
+                Table Mountain &amp; V&amp;A Waterfront Scenic Tour
+              </h2>
+              <p class="text-sm leading-relaxed mb-4" style="color: #475569;">
+                Table Mountain lower cableway viewpoint, Signal Hill panorama, Bo-Kaap heritage streets &amp; V&amp;A Waterfront marina.
+              </p>
+
+              <ul class="space-y-1.5 text-xs border-t border-slate-100 pt-3.5" style="color: #475569;">
+                <li>• Table Mountain lower cableway &amp; Signal Hill lookouts</li>
+                <li>• Historic colourful Bo-Kaap cobblestone streets</li>
+                <li>• V&amp;A Waterfront harbour &amp; hotel door-to-door transfers</li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-tour-name="Table Mountain & V&A Waterfront Scenic Tour"
+              data-tour-city="Cape Town"
+              data-tour-rate="1350"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="select-tour-btn mt-6 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Select &amp; Book Tour
+            </button>
+          </article>
+
+          <!-- TOUR 2: [Cape Town] Chapman's Peak Drive & Cape Peninsula Route -->
+          <article class="tour-card clean-card rounded-2xl p-6 flex flex-col justify-between" data-tour-city="Cape Town">
+            <div>
+              <div class="rounded-xl overflow-hidden border border-slate-200 mb-5" style="background-color: #f0f9ff;">
+                <img
+                  src="ct-chapmans-peak.jpg"
+                  alt="Bright daylight coastal cliffs of Chapman's Peak Drive overlooking turquoise Atlantic waves without people"
+                  class="w-full h-44 object-cover block"
+                  onerror="handleTourImageError(this, 'chapmans-peak', 'h-44')"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                  Cape Town • Full-Day
+                </span>
+                <span class="font-heading font-extrabold text-base" style="color: #0f172a;">
+                  R1,850
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">
+                Chapman's Peak Drive &amp; Cape Peninsula Route
+              </h2>
+              <p class="text-sm leading-relaxed mb-4" style="color: #475569;">
+                Atlantic Seaboard, Hout Bay harbour, cliffside Chapman's Peak Drive, Noordhoek Beach &amp; Cape Point Nature Reserve.
+              </p>
+
+              <ul class="space-y-1.5 text-xs border-t border-slate-100 pt-3.5" style="color: #475569;">
+                <li>• Scenic Atlantic Seaboard &amp; Hout Bay coastal harbour</li>
+                <li>• Cliffside Chapman's Peak Drive panoramic viewpoints</li>
+                <li>• Sweeping Noordhoek Beach &amp; Cape Point Nature Reserve</li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-tour-name="Chapman's Peak Drive & Cape Peninsula Route"
+              data-tour-city="Cape Town"
+              data-tour-rate="1850"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="select-tour-btn mt-6 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Select &amp; Book Tour
+            </button>
+          </article>
+
+          <!-- TOUR 3: [Cape Town] Kirstenbosch Gardens & Camps Bay Coastal Drive -->
+          <article class="tour-card clean-card rounded-2xl p-6 flex flex-col justify-between" data-tour-city="Cape Town">
+            <div>
+              <div class="rounded-xl overflow-hidden border border-slate-200 mb-5" style="background-color: #f0f9ff;">
+                <img
+                  src="ct-kirstenbosch.jpg"
+                  alt="Lush Kirstenbosch Botanical Gardens with Boomslang tree canopy walkway below Table Mountain without people"
+                  class="w-full h-44 object-cover block"
+                  onerror="handleTourImageError(this, 'kirstenbosch', 'h-44')"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                  Cape Town • Half-Day
+                </span>
+                <span class="font-heading font-extrabold text-base" style="color: #0f172a;">
+                  R1,200
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">
+                Kirstenbosch Gardens &amp; Camps Bay Coastal Drive
+              </h2>
+              <p class="text-sm leading-relaxed mb-4" style="color: #475569;">
+                Kirstenbosch National Botanical Gardens at the foot of Table Mountain, Boomslang canopy walkway &amp; Camps Bay coastline.
+              </p>
+
+              <ul class="space-y-1.5 text-xs border-t border-slate-100 pt-3.5" style="color: #475569;">
+                <li>• Kirstenbosch Gardens &amp; Boomslang treetop walkway</li>
+                <li>• Indigenous fynbos, cycads &amp; mountain backdrop</li>
+                <li>• Camps Bay palm-lined shoreline &amp; Twelve Apostles views</li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-tour-name="Kirstenbosch Gardens & Camps Bay Coastal Drive"
+              data-tour-city="Cape Town"
+              data-tour-rate="1200"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="select-tour-btn mt-6 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Select &amp; Book Tour
+            </button>
+          </article>
+
+          <!-- TOUR 4: [Durban] Durban Golden Mile, Moses Mabhida & Point Waterfront -->
+          <article class="tour-card clean-card rounded-2xl p-6 flex flex-col justify-between" data-tour-city="Durban">
+            <div>
+              <div class="rounded-xl overflow-hidden border border-slate-200 mb-5" style="background-color: #f0f9ff;">
+                <img
+                  src="dbn-golden-mile.jpg"
+                  alt="Sunny Durban Golden Mile beach, palm trees, and Moses Mabhida Stadium arch without people"
+                  class="w-full h-44 object-cover block"
+                  onerror="handleTourImageError(this, 'golden-mile', 'h-44')"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0;">
+                  Durban • Half-Day
+                </span>
+                <span class="font-heading font-extrabold text-base" style="color: #0f172a;">
+                  R1,150
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">
+                Durban Golden Mile, Moses Mabhida &amp; Point Waterfront
+              </h2>
+              <p class="text-sm leading-relaxed mb-4" style="color: #475569;">
+                Golden Mile Indian Ocean promenade, iconic Moses Mabhida Stadium arch, Durban Botanic Gardens &amp; Point Waterfront canals.
+              </p>
+
+              <ul class="space-y-1.5 text-xs border-t border-slate-100 pt-3.5" style="color: #475569;">
+                <li>• Golden Mile beachfront promenade &amp; Indian Ocean views</li>
+                <li>• Iconic Moses Mabhida Stadium arch &amp; Botanic Gardens</li>
+                <li>• Point Waterfront marina canals &amp; hotel pickup</li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-tour-name="Durban Golden Mile, Moses Mabhida & Point Waterfront"
+              data-tour-city="Durban"
+              data-tour-rate="1150"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="select-tour-btn mt-6 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Select &amp; Book Tour
+            </button>
+          </article>
+
+          <!-- TOUR 5: [Durban] Valley of a Thousand Hills & Botha's Hill Panorama -->
+          <article class="tour-card clean-card rounded-2xl p-6 flex flex-col justify-between" data-tour-city="Durban">
+            <div>
+              <div class="rounded-xl overflow-hidden border border-slate-200 mb-5" style="background-color: #f0f9ff;">
+                <img
+                  src="dbn-valley-hills.jpg"
+                  alt="Rolling green Valley of a Thousand Hills and winding Umgeni River in daylight without people"
+                  class="w-full h-44 object-cover block"
+                  onerror="handleTourImageError(this, 'valley-hills', 'h-44')"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0;">
+                  Durban • Half-Day / Full-Day
+                </span>
+                <span class="font-heading font-extrabold text-base" style="color: #0f172a;">
+                  R1,450
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">
+                Valley of a Thousand Hills &amp; Botha's Hill Panorama
+              </h2>
+              <p class="text-sm leading-relaxed mb-4" style="color: #475569;">
+                Sweeping emerald hills overlooking the winding Umgeni River, panoramic valley viewpoints &amp; Kloof Gorge scenery.
+              </p>
+
+              <ul class="space-y-1.5 text-xs border-t border-slate-100 pt-3.5" style="color: #475569;">
+                <li>• Botha's Hill ridge overlooking the Umgeni River valley</li>
+                <li>• Dramatic Kloof Gorge cliffs &amp; rolling emerald hills</li>
+                <li>• Private return transport from Durban &amp; Umhlanga</li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-tour-name="Valley of a Thousand Hills & Botha's Hill Panorama"
+              data-tour-city="Durban"
+              data-tour-rate="1450"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="select-tour-btn mt-6 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Select &amp; Book Tour
+            </button>
+          </article>
+
+          <!-- TOUR 6: [Durban] Umhlanga Rocks Lighthouse & North Coast Scenic Tour -->
+          <article class="tour-card clean-card rounded-2xl p-6 flex flex-col justify-between" data-tour-city="Durban">
+            <div>
+              <div class="rounded-xl overflow-hidden border border-slate-200 mb-5" style="background-color: #f0f9ff;">
+                <img
+                  src="dbn-umhlanga.jpg"
+                  alt="Red-and-white Umhlanga Rocks Lighthouse and Whalebone Pier over blue ocean without people"
+                  class="w-full h-44 object-cover block"
+                  onerror="handleTourImageError(this, 'umhlanga', 'h-44')"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0;">
+                  Durban • Half-Day
+                </span>
+                <span class="font-heading font-extrabold text-base" style="color: #0f172a;">
+                  R1,100
+                </span>
+              </div>
+
+              <h2 class="font-heading font-bold text-lg mb-2" style="color: #0f172a;">
+                Umhlanga Rocks Lighthouse &amp; North Coast Scenic Tour
+              </h2>
+              <p class="text-sm leading-relaxed mb-4" style="color: #475569;">
+                Iconic red-and-white Umhlanga Lighthouse, Whalebone Pier ocean views &amp; subtropical coastal forest drive.
+              </p>
+
+              <ul class="space-y-1.5 text-xs border-t border-slate-100 pt-3.5" style="color: #475569;">
+                <li>• Red-and-white Umhlanga Lighthouse &amp; Whalebone Pier</li>
+                <li>• Subtropical North Coast dune forest &amp; lagoon scenery</li>
+                <li>• Flexible hotel &amp; beachfront pickups across Durban</li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-tour-name="Umhlanga Rocks Lighthouse & North Coast Scenic Tour"
+              data-tour-city="Durban"
+              data-tour-rate="1100"
+              style="background-color: #1d4ed8; color: #ffffff;"
+              class="select-tour-btn mt-6 w-full py-3 px-4 rounded-xl font-semibold text-sm hover:opacity-95 transition-opacity"
+            >
+              Select &amp; Book Tour
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PAGE 4: BOOK A RIDE (#book)
+         - Clean 2-column interactive booking & live ZAR fare calculator
+         - City selector: Cape Town or Durban (CPT / DUR airports & quick-fills)
+    ==================================================================== -->
+    <section id="page-book" data-page="book" class="page-view hidden py-12 sm:py-20" style="background-color: #ffffff !important;">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+        <!-- Page Header -->
+        <div class="max-w-2xl space-y-3">
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+            Cape Town &amp; Durban Fare Calculator
+          </span>
+          <h1 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #0f172a;">
+            Book a Ride, Airport Shuttle or Tour
+          </h1>
+          <p class="text-base" style="color: #475569;">
+            Choose Cape Town or Durban, calculate your instant South African Rand (ZAR) fare, and send your booking straight to WhatsApp (<strong style="color: #0f172a;">084 034 3702</strong>).
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Left Column: Pure White Interactive Booking Form -->
+          <div class="lg:col-span-7">
+            <div class="clean-card rounded-2xl p-6 sm:p-8 space-y-6">
+
+              <!-- Step 1: Service Mode Tabs -->
+              <div class="grid grid-cols-3 gap-2 p-1.5 rounded-xl" style="background-color: #f8fafc; border: 1px solid #e2e8f0;" role="tablist">
+                <button
+                  type="button"
+                  role="tab"
+                  data-booking-mode="ehailing"
+                  aria-selected="true"
+                  style="background-color: #1d4ed8; color: #ffffff;"
+                  class="booking-mode-tab py-2.5 px-2 rounded-lg text-xs sm:text-sm font-semibold transition-all"
+                >
+                  E-Hailing Ride
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  data-booking-mode="airport"
+                  aria-selected="false"
+                  style="background-color: transparent; color: #475569;"
+                  class="booking-mode-tab py-2.5 px-2 rounded-lg text-xs sm:text-sm font-semibold transition-all"
+                >
+                  Airport Shuttle (CPT / DUR)
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  data-booking-mode="tourism"
+                  aria-selected="false"
+                  style="background-color: transparent; color: #475569;"
+                  class="booking-mode-tab py-2.5 px-2 rounded-lg text-xs sm:text-sm font-semibold transition-all"
+                >
+                  Tourism Package
+                </button>
+              </div>
+
+              <form id="rideBookingForm" class="space-y-5" novalidate>
+
+                <!-- City Selector (Cape Town vs Durban) -->
+                <div>
+                  <label class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                    Operating City
+                  </label>
+                  <div class="grid grid-cols-2 gap-3">
+                    <button
+                      type="button"
+                      data-book-city="Cape Town"
+                      style="background-color: #eff6ff; border: 1px solid #1d4ed8; color: #1d4ed8;"
+                      class="book-city-btn py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all"
+                    >
+                      Cape Town (Western Cape)
+                    </button>
+                    <button
+                      type="button"
+                      data-book-city="Durban"
+                      style="background-color: #ffffff; border: 1px solid #cbd5e1; color: #0f172a;"
+                      class="book-city-btn py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all"
+                    >
+                      Durban (KwaZulu-Natal)
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tourism Package Selector (Visible in Tourism Package mode) -->
+                <div id="tourismSelectGroup" class="hidden">
+                  <label for="tourSelectInput" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                    Select Cape Town or Durban Tour Package
+                  </label>
+                  <select
+                    id="tourSelectInput"
+                    style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                    class="w-full px-3.5 py-3 rounded-xl text-sm focus:outline-none focus:border-blue-700"
+                  >
+                    <option value="Table Mountain & V&A Waterfront Scenic Tour" data-city="Cape Town" data-rate="1350">[Cape Town] Table Mountain &amp; V&amp;A Waterfront Scenic Tour (R1,350)</option>
+                    <option value="Chapman's Peak Drive & Cape Peninsula Route" data-city="Cape Town" data-rate="1850">[Cape Town] Chapman's Peak Drive &amp; Cape Peninsula Route (R1,850)</option>
+                    <option value="Kirstenbosch Gardens & Camps Bay Coastal Drive" data-city="Cape Town" data-rate="1200">[Cape Town] Kirstenbosch Gardens &amp; Camps Bay Coastal Drive (R1,200)</option>
+                    <option value="Durban Golden Mile, Moses Mabhida & Point Waterfront" data-city="Durban" data-rate="1150">[Durban] Durban Golden Mile, Moses Mabhida &amp; Point Waterfront (R1,150)</option>
+                    <option value="Valley of a Thousand Hills & Botha's Hill Panorama" data-city="Durban" data-rate="1450">[Durban] Valley of a Thousand Hills &amp; Botha's Hill Panorama (R1,450)</option>
+                    <option value="Umhlanga Rocks Lighthouse & North Coast Scenic Tour" data-city="Durban" data-rate="1100">[Durban] Umhlanga Rocks Lighthouse &amp; North Coast Scenic Tour (R1,100)</option>
+                  </select>
+                </div>
+
+                <!-- Pickup & Drop-off Inputs -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="pickupLocation" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      Pickup Location
+                    </label>
+                    <input
+                      id="pickupLocation"
+                      type="text"
+                      placeholder="e.g. V&A Waterfront / Sea Point"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm placeholder-slate-400 focus:outline-none focus:border-blue-700"
+                    />
+                  </div>
+                  <div>
+                    <label for="dropoffLocation" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      Drop-off / Destination
+                    </label>
+                    <input
+                      id="dropoffLocation"
+                      type="text"
+                      placeholder="e.g. Cape Town International Airport (CPT)"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm placeholder-slate-400 focus:outline-none focus:border-blue-700"
+                    />
+                  </div>
+                </div>
+
+                <!-- Dynamic City Quick-Fill Pills (Cape Town or Durban Only) -->
+                <div>
+                  <div class="text-[11px] font-semibold mb-1.5" style="color: #475569;">
+                    Popular <span id="quickPillCityLabel">Cape Town</span> Routes (Tap to fill):
+                  </div>
+                  <div id="quickRoutePills" class="flex flex-wrap gap-2"></div>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="pickupDate" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      Pickup Date
+                    </label>
+                    <input
+                      id="pickupDate"
+                      type="date"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm focus:outline-none focus:border-blue-700"
+                    />
+                  </div>
+                  <div>
+                    <label for="pickupTime" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      Pickup Time
+                    </label>
+                    <input
+                      id="pickupTime"
+                      type="time"
+                      value="09:00"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm focus:outline-none focus:border-blue-700"
+                    />
+                  </div>
+                </div>
+
+                <!-- Vehicle Class Selector -->
+                <div>
+                  <span class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">Vehicle Class</span>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <label class="cursor-pointer">
+                      <input type="radio" name="vehicleTier" value="Standard Sedan (1–4 Pax)" data-mult="1.0" checked class="sr-only tier-radio" />
+                      <div class="tier-box p-3 rounded-xl text-center transition-all" style="background-color: #eff6ff; border: 1px solid #1d4ed8;">
+                        <div class="text-xs font-bold" style="color: #0f172a;">Standard Sedan</div>
+                        <div class="text-[11px] mt-0.5" style="color: #475569;">1–4 Pax</div>
+                      </div>
+                    </label>
+
+                    <label class="cursor-pointer">
+                      <input type="radio" name="vehicleTier" value="Executive Comfort (1–4 Pax)" data-mult="1.3" class="sr-only tier-radio" />
+                      <div class="tier-box p-3 rounded-xl text-center transition-all" style="background-color: #ffffff; border: 1px solid #cbd5e1;">
+                        <div class="text-xs font-bold" style="color: #0f172a;">Executive Comfort</div>
+                        <div class="text-[11px] mt-0.5" style="color: #475569;">1–4 Pax</div>
+                      </div>
+                    </label>
+
+                    <label class="cursor-pointer">
+                      <input type="radio" name="vehicleTier" value="Tour & Shuttle Van / Code 10 (5–13 Pax)" data-mult="1.65" class="sr-only tier-radio" />
+                      <div class="tier-box p-3 rounded-xl text-center transition-all" style="background-color: #ffffff; border: 1px solid #cbd5e1;">
+                        <div class="text-xs font-bold" style="color: #0f172a;">Tour &amp; Shuttle Van</div>
+                        <div class="text-[11px] mt-0.5" style="color: #475569;">Code 10 • 5–13 Pax</div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Distance Slider & Numeric Input (1 km to 150 km) -->
+                <div id="distanceControlBox" class="p-4 rounded-xl" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                  <div class="flex items-center justify-between gap-3 mb-2">
+                    <label for="kmSlider" class="text-xs font-semibold" style="color: #0f172a;">
+                      Estimated Trip Distance (km)
+                    </label>
+                    <div class="flex items-center gap-1.5">
+                      <input
+                        id="kmNumber"
+                        type="number"
+                        min="1"
+                        max="150"
+                        value="18"
+                        aria-label="Distance in kilometers"
+                        style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                        class="w-16 px-2.5 py-1 rounded-lg text-right text-xs font-bold focus:outline-none focus:border-blue-700"
+                      />
+                      <span class="text-xs font-semibold" style="color: #475569;">km</span>
+                    </div>
+                  </div>
+                  <input
+                    id="kmSlider"
+                    type="range"
+                    min="1"
+                    max="150"
+                    value="18"
+                    class="w-full accent-blue-700 cursor-pointer h-1.5 rounded-lg"
+                    style="background-color: #e2e8f0;"
+                  />
+                  <div class="flex justify-between text-[11px] mt-1.5" style="color: #475569;">
+                    <span>1 km</span>
+                    <span>75 km</span>
+                    <span>150 km</span>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Real-Time ZAR Price Breakdown & WhatsApp Action -->
+          <div class="lg:col-span-5 space-y-5">
+            <div class="clean-card rounded-2xl p-6 sm:p-7 space-y-5">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <div>
+                  <div class="text-xs font-semibold uppercase tracking-wider" style="color: #1d4ed8;">Instant ZAR Estimate</div>
+                  <div id="summaryServiceTitle" class="font-heading font-bold text-base mt-0.5" style="color: #0f172a;">E-Hailing Ride</div>
+                </div>
+                <span id="summaryCityBadge" class="px-2.5 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+                  Cape Town
+                </span>
+              </div>
+
+              <div class="space-y-2.5 text-sm">
+                <div class="flex justify-between gap-2">
+                  <span style="color: #475569;">Operating City</span>
+                  <span id="summaryCityText" class="font-semibold" style="color: #0f172a;">Cape Town</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span style="color: #475569;">Vehicle Class</span>
+                  <span id="summaryVehicleText" class="font-semibold text-right" style="color: #0f172a;">Standard Sedan (1–4 Pax)</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span style="color: #475569;">Trip Scope</span>
+                  <span id="summaryDistanceText" class="font-semibold text-right" style="color: #0f172a;">18 km</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span style="color: #475569;">Date &amp; Time</span>
+                  <span id="summaryScheduleText" class="font-semibold text-right" style="color: #0f172a;">Flexible</span>
+                </div>
+              </div>
+
+              <!-- Real-Time ZAR Price Box -->
+              <div class="p-4 rounded-xl flex items-center justify-between" style="background-color: #eff6ff; border: 1px solid #bfdbfe;">
+                <div>
+                  <div class="text-xs font-semibold" style="color: #1d4ed8;">Estimated Total</div>
+                  <div class="text-[11px]" style="color: #475569;">South African Rand (ZAR)</div>
+                </div>
+                <div id="estimatedFareTotal" class="font-heading text-3xl font-extrabold" style="color: #0f172a;">
+                  R230
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="space-y-3">
+                <button
+                  type="button"
+                  id="bookWhatsappBtn"
+                  style="background-color: #16a34a; color: #ffffff;"
+                  class="w-full py-3.5 px-5 rounded-xl font-bold text-sm hover:opacity-95 transition-opacity flex items-center justify-center gap-2"
+                >
+                  <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.477 1.332 4.992L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.262h.004c5.515 0 9.969-4.454 9.969-9.969 0-2.664-1.037-5.168-2.921-7.051A9.903 9.903 0 0 0 12.031 2z"/>
+                  </svg>
+                  <span>Send Booking via WhatsApp (084 034 3702)</span>
+                </button>
+
+                <button
+                  type="button"
+                  id="previewSummaryBtn"
+                  style="background-color: #ffffff; border: 1px solid #cbd5e1; color: #0f172a;"
+                  class="w-full py-3 px-4 rounded-xl font-semibold text-xs hover:border-blue-700 transition-colors"
+                >
+                  Preview Booking Summary
+                </button>
+              </div>
+            </div>
+
+            <!-- On-Page Preview Booking Summary Confirmation Box -->
+            <div id="bookingPreviewBox" class="hidden clean-card rounded-2xl p-5 space-y-2.5" style="border-color: #bfdbfe;">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider" style="color: #1d4ed8;">Booking Summary Preview</span>
+                <button type="button" id="closePreviewBoxBtn" class="text-xs font-semibold" style="color: #475569;">Hide</button>
+              </div>
+              <pre id="bookingPreviewText" class="whitespace-pre-wrap font-sans text-xs leading-relaxed" style="color: #0f172a;"></pre>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PAGE 5: CAREERS (#careers)
+         - Shuttle Driver Needed — We Are Hiring! (Cape Town & Durban)
+    ==================================================================== -->
+    <section id="page-careers" data-page="careers" class="page-view hidden py-12 sm:py-20" style="background-color: #ffffff !important;">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+        <!-- Page Header -->
+        <div class="max-w-2xl space-y-3">
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-semibold" style="background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+            We Are Hiring! • Cape Town &amp; Durban
+          </span>
+          <h1 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #0f172a;">
+            Shuttle Driver Needed — We Are Hiring!
+          </h1>
+          <p class="text-base" style="color: #475569;">
+            S&amp;S Super Serve Transport Solutions is expanding our shuttle &amp; tour fleet in <strong style="color: #0f172a;">Cape Town</strong> and <strong style="color: #0f172a;">Durban</strong>. Apply below to send your application directly to <strong style="color: #0f172a;">084 034 3702</strong>.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Left Column: Driver Requirements Checklist -->
+          <div class="lg:col-span-5">
+            <div class="clean-card rounded-2xl p-6 sm:p-7 space-y-5">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider" style="color: #1d4ed8;">Applicant Requirements</div>
+                <h2 class="font-heading font-bold text-lg mt-1" style="color: #0f172a;">Shuttle Driver Criteria</h2>
+              </div>
+
+              <ul class="space-y-3.5 text-sm" style="color: #0f172a;">
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5" style="background-color: #eff6ff; color: #1d4ed8;">✓</span>
+                  <span>Must have a <strong>valid driver's license</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5" style="background-color: #eff6ff; color: #1d4ed8;">✓</span>
+                  <span><strong>Preferably Code 10</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5" style="background-color: #eff6ff; color: #1d4ed8;">✓</span>
+                  <span>Valid <strong>PDP (Professional Driving Permit)</strong> is advantageous</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5" style="background-color: #eff6ff; color: #1d4ed8;">✓</span>
+                  <span>Operating bases: <strong>Cape Town</strong> or <strong>Durban</strong></span>
+                </li>
+              </ul>
+
+              <div class="p-4 rounded-xl text-xs leading-relaxed space-y-1.5" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #e2e8f0;">
+                <div class="font-bold" style="color: #1d4ed8;">How to Send Your Application</div>
+                <p style="color: #475569;">
+                  Fill in your details on the right and click submit. WhatsApp will open to <strong style="color: #0f172a;">084 034 3702</strong> with your application ready—remember to attach your <strong style="color: #0f172a;">CV</strong>!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Clean White Driver Application Form -->
+          <div class="lg:col-span-7">
+            <div class="clean-card rounded-2xl p-6 sm:p-8">
+              <h2 class="font-heading font-bold text-lg mb-5" style="color: #0f172a;">Driver Application Form</h2>
+
+              <form id="driverCareerForm" class="space-y-4" novalidate>
+                <div>
+                  <label for="driverFullName" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                    Full Name &amp; Surname
+                  </label>
+                  <input
+                    id="driverFullName"
+                    type="text"
+                    placeholder="e.g. Sipho Ndlovu"
+                    style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                    class="w-full px-3.5 py-3 rounded-xl text-sm placeholder-slate-400 focus:outline-none focus:border-blue-700"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="driverCityBase" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      Operating Base City
+                    </label>
+                    <select
+                      id="driverCityBase"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm focus:outline-none focus:border-blue-700"
+                    >
+                      <option value="Cape Town">Cape Town (Western Cape)</option>
+                      <option value="Durban">Durban (KwaZulu-Natal)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="driverResidence" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      Area / Suburb in Cape Town or Durban
+                    </label>
+                    <input
+                      id="driverResidence"
+                      type="text"
+                      placeholder="e.g. Bellville / Sea Point / Umhlanga / Berea"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm placeholder-slate-400 focus:outline-none focus:border-blue-700"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="driverLicenseType" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      License Code
+                    </label>
+                    <select
+                      id="driverLicenseType"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm focus:outline-none focus:border-blue-700"
+                    >
+                      <option value="Code 10 (Preferred)">Code 10 (Preferred)</option>
+                      <option value="Code 8 / Code B">Code 8 / Code B</option>
+                      <option value="Code 14">Code 14</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="driverPdpStatus" class="block text-xs font-semibold mb-1.5" style="color: #0f172a;">
+                      PDP Status
+                    </label>
+                    <select
+                      id="driverPdpStatus"
+                      style="background-color: #ffffff !important; border: 1px solid #cbd5e1; color: #0f172a !important;"
+                      class="w-full px-3.5 py-3 rounded-xl text-sm focus:outline-none focus:border-blue-700"
+                    >
+                      <option value="Valid PDP">Valid PDP</option>
+                      <option value="PDP Application in Progress">PDP Application in Progress</option>
+                      <option value="No PDP Yet">No PDP Yet</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- CV Reminder Checkbox -->
+                <label class="flex items-start gap-3 p-3.5 rounded-xl cursor-pointer" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                  <input
+                    id="driverCvReminder"
+                    type="checkbox"
+                    checked
+                    class="mt-0.5 w-4 h-4 accent-blue-700 rounded cursor-pointer"
+                  />
+                  <span class="text-xs leading-relaxed" style="color: #0f172a;">
+                    I understand I must attach my <strong>CV</strong> in the WhatsApp chat to <strong>084 034 3702</strong> along with my Name, Surname, and Suburb.
+                  </span>
+                </label>
+
+                <div class="pt-1">
+                  <button
+                    type="submit"
+                    style="background-color: #16a34a; color: #ffffff;"
+                    class="w-full py-3.5 px-5 rounded-xl font-bold text-sm hover:opacity-95 transition-opacity flex items-center justify-center gap-2"
+                  >
+                    <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.477 1.332 4.992L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.262h.004c5.515 0 9.969-4.454 9.969-9.969 0-2.664-1.037-5.168-2.921-7.051A9.903 9.903 0 0 0 12.031 2z"/>
+                    </svg>
+                    <span>Send Driver Application via WhatsApp (084 034 3702)</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       MINIMAL PURE-WHITE FOOTER
+       - Uncropped logo.jpg (h-20 w-auto object-contain) + SVG emblem fallback
+       - Cape Town & Durban service summary, quick navigation links & WhatsApp
+  ====================================================================== -->
+  <footer class="py-12 border-t border-slate-200" style="background-color: #ffffff !important; color: #0f172a !important;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-slate-200">
+
+        <!-- Left: Uncropped Logo & Cape Town / Durban Summary -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <img
+            src="logo.jpg"
+            alt="S&S Super Serve Transport Solutions Logo"
+            class="h-20 w-auto object-contain block"
+            style="background-color: #ffffff;"
+            onerror="handleLogoFallback(this, 'h-20 w-auto')"
+          />
+          <div>
+            <div class="font-heading font-bold text-base" style="color: #0f172a;">S&amp;S Super Serve Transport Solutions</div>
+            <p class="text-xs mt-1" style="color: #475569;">
+              Cape Town &amp; Durban • E-Hailing, CPT &amp; DUR Airport Shuttles &amp; Scenic Tours
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Quick Links & WhatsApp Contact -->
+        <div class="flex flex-col sm:items-end gap-3">
+          <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium" style="color: #475569;">
+            <a href="#home" data-route="home" class="route-link hover:text-blue-700 transition-colors">Home</a>
+            <a href="#services" data-route="services" class="route-link hover:text-blue-700 transition-colors">Services</a>
+            <a href="#tours" data-route="tours" class="route-link hover:text-blue-700 transition-colors">Tours</a>
+            <a href="#book" data-route="book" class="route-link hover:text-blue-700 transition-colors">Book a Ride</a>
+            <a href="#careers" data-route="careers" class="route-link hover:text-blue-700 transition-colors">Careers</a>
+          </div>
+
+          <a
+            href="https://wa.me/27840343702"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-bold hover:underline"
+            style="color: #16a34a;"
+          >
+            WhatsApp / Phone: 084 034 3702
+          </a>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs" style="color: #475569;">
+        <p>© <span id="footerYear"></span> S&amp;S Super Serve Transport Solutions. All rights reserved.</p>
+        <p>Serving Cape Town (Western Cape) &amp; Durban (KwaZulu-Natal)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       ON-PAGE NOTIFICATION TOAST (PURE WHITE — ZERO ALERT() POPUPS)
+  ====================================================================== -->
+  <div
+    id="statusToast"
+    class="fixed bottom-5 right-5 z-50 hidden max-w-sm p-4 rounded-2xl shadow-md"
+    style="background-color: #ffffff !important; border: 1px solid #bfdbfe; color: #0f172a !important;"
+    role="status"
+    aria-live="polite"
+  >
+    <div class="flex items-start gap-3">
+      <span class="w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0" style="background-color: #1d4ed8;"></span>
+      <div class="text-xs leading-relaxed">
+        <div id="statusToastTitle" class="font-bold" style="color: #0f172a;">Notice</div>
+        <div id="statusToastMsg" class="mt-0.5" style="color: #475569;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MULTI-PAGE ROUTING, FARE CALCULATOR & WHATSAPP DISPATCH
+  ====================================================================== -->
+  <script>
+    // ---------------------------------------------------------------------
+    // MULTI-PAGE HASH ROUTING, SERVICE FILTERS, TOUR FILTERS,
+    // LIVE ZAR FARE CALCULATOR & WHATSAPP DISPATCH (084 034 3702)
+    // ---------------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+      const WHATSAPP_NUMBER = '27840343702';
+      const VALID_ROUTES = ['home', 'services', 'tours', 'book', 'careers'];
+
+      // Application State
+      let activeServiceCityFilter = 'all';
+      let activeBookingMode = 'ehailing';
+      let activeBookingCity = 'Cape Town';
+      let selectedTourRate = 1350;
+
+      // Popular Cape Town & Durban Quick-Fill Routes
+      const CITY_QUICK_ROUTES = {
+        'Cape Town': [
+          { label: 'CPT Airport → V&A Waterfront (19 km)', pickup: 'Cape Town International Airport (CPT)', dropoff: 'V&A Waterfront, Cape Town', km: 19, mode: 'airport' },
+          { label: 'Sea Point → Camps Bay (7 km)', pickup: 'Sea Point Promenade, Cape Town', dropoff: 'Camps Bay Beachfront, Cape Town', km: 7, mode: 'ehailing' },
+          { label: 'City Bowl → Cape Point (68 km)', pickup: 'Cape Town City Bowl', dropoff: 'Cape Point Nature Reserve', km: 68, mode: 'ehailing' }
+        ],
+        'Durban': [
+          { label: 'DUR King Shaka → Umhlanga (18 km)', pickup: 'King Shaka International Airport (DUR)', dropoff: 'Umhlanga Rocks, Durban', km: 18, mode: 'airport' },
+          { label: 'Golden Mile → Point Waterfront (5 km)', pickup: 'Durban Golden Mile Beachfront', dropoff: 'Point Waterfront, Durban', km: 5, mode: 'ehailing' },
+          { label: 'Umhlanga → Valley of 1000 Hills (48 km)', pickup: 'Umhlanga, Durban', dropoff: 'Valley of a Thousand Hills, Botha\'s Hill', km: 48, mode: 'ehailing' }
+        ]
+      };
+
+      // Set Footer Year
+      const footerYearEl = document.getElementById('footerYear');
+      if (footerYearEl) footerYearEl.textContent = new Date().getFullYear();
+
+      // Default Pickup Date to Today
+      const pickupDateInput = document.getElementById('pickupDate');
+      if (pickupDateInput && !pickupDateInput.value) {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        pickupDateInput.value = `${yyyy}-${mm}-${dd}`;
+      }
+
+      // -------------------------------------------------------------------
+      // Toast Notification Helper (Pure White, Zero alert() Dialogs)
+      // -------------------------------------------------------------------
+      let toastTimer = null;
+      function showToast(title, message) {
+        const toast = document.getElementById('statusToast');
+        const titleEl = document.getElementById('statusToastTitle');
+        const msgEl = document.getElementById('statusToastMsg');
+        if (!toast || !titleEl || !msgEl) return;
+
+        titleEl.textContent = title;
+        msgEl.textContent = message;
+        toast.classList.remove('hidden');
+
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 4500);
+      }
+
+      // -------------------------------------------------------------------
+      // Multi-Page Hash Router (#home, #services, #tours, #book, #careers)
+      // -------------------------------------------------------------------
+      function navigateToRoute(routeName, pushHash = true) {
+        const target = VALID_ROUTES.includes(routeName) ? routeName : 'home';
+
+        // Toggle visible page section
+        document.querySelectorAll('.page-view').forEach((section) => {
+          if (section.dataset.page === target) {
+            section.classList.remove('hidden');
+          } else {
+            section.classList.add('hidden');
+          }
+        });
+
+        // Update desktop nav tabs
+        document.querySelectorAll('.nav-tab').forEach((tab) => {
+          const isCurrent = tab.dataset.route === target;
+          tab.style.backgroundColor = isCurrent ? '#eff6ff' : 'transparent';
+          tab.style.color = isCurrent ? '#1d4ed8' : '#475569';
+          tab.style.border = isCurrent ? '1px solid #bfdbfe' : '1px solid transparent';
+        });
+
+        // Update mobile nav tabs
+        document.querySelectorAll('.mobile-nav-tab').forEach((tab) => {
+          const isCurrent = tab.dataset.route === target;
+          tab.style.backgroundColor = isCurrent ? '#eff6ff' : '#ffffff';
+          tab.style.color = isCurrent ? '#1d4ed8' : '#0f172a';
+        });
+
+        // Close mobile drawer if open
+        closeMobileMenu();
+
+        if (pushHash && window.location.hash !== '#' + target) {
+          history.replaceState(null, '', '#' + target);
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Bind all .route-link anchors
+      document.querySelectorAll('.route-link').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const route = link.dataset.route;
+          if (route) {
+            e.preventDefault();
+            navigateToRoute(route, true);
+          }
+        });
+      });
+
+      window.addEventListener('hashchange', () => {
+        const hashRoute = window.location.hash.replace('#', '').trim().toLowerCase();
+        navigateToRoute(VALID_ROUTES.includes(hashRoute) ? hashRoute : 'home', false);
+      });
+
+      // Mobile Hamburger Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIconOpen = document.getElementById('menuIconOpen');
+      const menuIconClose = document.getElementById('menuIconClose');
+
+      function closeMobileMenu() {
+        if (!mobileMenu) return;
+        mobileMenu.classList.add('hidden');
+        if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIconOpen) menuIconOpen.classList.remove('hidden');
+        if (menuIconClose) menuIconClose.classList.add('hidden');
+      }
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            menuIconOpen.classList.add('hidden');
+            menuIconClose.classList.remove('hidden');
+          } else {
+            closeMobileMenu();
+          }
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // Page 2 (#services): City Filter Tabs & Pre-Selection into #book
+      // -------------------------------------------------------------------
+      const serviceCityTabs = document.querySelectorAll('.service-city-tab');
+      const serviceCoverageBadge = document.getElementById('serviceCoverageBadge');
+      const serviceCoverageText = document.getElementById('serviceCoverageText');
+      const serviceDesc1 = document.getElementById('serviceDesc1');
+      const serviceBullet1 = document.getElementById('serviceBullet1');
+      const serviceBullet2 = document.getElementById('serviceBullet2');
+      const serviceDesc2 = document.getElementById('serviceDesc2');
+      const serviceAirportBullet1 = document.getElementById('serviceAirportBullet1');
+      const serviceAirportBullet2 = document.getElementById('serviceAirportBullet2');
+      const serviceDesc3 = document.getElementById('serviceDesc3');
+
+      function applyServiceCityFilter(city) {
+        activeServiceCityFilter = city;
+
+        serviceCityTabs.forEach((btn) => {
+          const isSelected = btn.dataset.serviceCity === city;
+          btn.setAttribute('aria-selected', String(isSelected));
+          btn.style.backgroundColor = isSelected ? '#1d4ed8' : 'transparent';
+          btn.style.color = isSelected ? '#ffffff' : '#475569';
+        });
+
+        if (city === 'Cape Town') {
+          serviceCoverageBadge.textContent = 'Cape Town (Western Cape) Coverage';
+          serviceCoverageText.textContent = 'Dedicated vehicles across Cape Town City Bowl, V&A Waterfront, Sea Point, Camps Bay, Southern Suburbs, Bellville & Cape Town International Airport (CPT).';
+          serviceDesc1.textContent = 'Fast, reliable door-to-door e-hailing across Cape Town City Bowl, Sea Point, V&A Waterfront, Camps Bay & Southern Suburbs.';
+          serviceBullet1.textContent = 'City Bowl, V&A Waterfront, Sea Point & Camps Bay';
+          serviceBullet2.textContent = 'Claremont, Rondebosch, Century City & Bellville';
+          serviceDesc2.textContent = 'Flight-tracked meet & greet transfers to and from Cape Town International Airport (CPT) for individuals and groups.';
+          serviceAirportBullet1.textContent = 'Cape Town International Airport (CPT) arrivals & departures';
+          serviceAirportBullet2.textContent = 'Direct hotel, guesthouse & Waterfront drop-offs';
+          serviceDesc3.textContent = 'Half-day & full-day private Cape Town charters to Table Mountain, Chapman’s Peak Drive, Cape Point & Kirstenbosch.';
+        } else if (city === 'Durban') {
+          serviceCoverageBadge.textContent = 'Durban (KwaZulu-Natal) Coverage';
+          serviceCoverageText.textContent = 'Dedicated vehicles across Umhlanga Rocks, Durban Golden Mile, Berea, Morningside, Westville, Pinetown & King Shaka International Airport (DUR).';
+          serviceDesc1.textContent = 'Fast, reliable door-to-door e-hailing across Umhlanga, Durban Beachfront, Berea, Morningside & Westville.';
+          serviceBullet1.textContent = 'Umhlanga Rocks, La Lucia & Durban North';
+          serviceBullet2.textContent = 'Durban Golden Mile, Berea, Morningside & Westville';
+          serviceDesc2.textContent = 'Flight-tracked meet & greet transfers to and from King Shaka International Airport (DUR) along the North Coast & CBD.';
+          serviceAirportBullet1.textContent = 'King Shaka International Airport (DUR) arrivals & departures';
+          serviceAirportBullet2.textContent = 'Direct Umhlanga, Beachfront & Point Waterfront drop-offs';
+          serviceDesc3.textContent = 'Half-day & full-day private Durban charters to the Golden Mile, Moses Mabhida Stadium, Valley of a Thousand Hills & Umhlanga Lighthouse.';
+        } else {
+          serviceCoverageBadge.textContent = 'Western Cape & KwaZulu-Natal Coverage';
+          serviceCoverageText.textContent = 'Serving Cape Town (City Bowl, Sea Point, Waterfront, Camps Bay, CPT Airport) and Durban (Umhlanga, Berea, Durban Beachfront, Westville, DUR Airport).';
+          serviceDesc1.textContent = 'Fast, safe door-to-door trips across Cape Town City Bowl, Sea Point, Waterfront, Umhlanga, Durban Berea & Beachfront.';
+          serviceBullet1.textContent = 'Cape Town City Bowl, Sea Point & Waterfront';
+          serviceBullet2.textContent = 'Durban Umhlanga, Berea & Beachfront';
+          serviceDesc2.textContent = 'Flight-tracked meet & greet at Cape Town International Airport (CPT) & King Shaka International Airport (DUR).';
+          serviceAirportBullet1.textContent = 'Cape Town International Airport (CPT) transfers';
+          serviceAirportBullet2.textContent = 'King Shaka International Airport (DUR) transfers';
+          serviceDesc3.textContent = 'Half-day & full-day private vehicles with local Cape Town and Durban route knowledge and zero rush.';
+        }
+      }
+
+      serviceCityTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          applyServiceCityFilter(tab.dataset.serviceCity);
+        });
+      });
+
+      // Book This Service buttons (from #services or #home)
+      document.querySelectorAll('.book-service-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const mode = btn.dataset.preselectService || 'ehailing';
+          const targetCity = activeServiceCityFilter === 'Durban' ? 'Durban' : 'Cape Town';
+          setBookingCity(targetCity);
+          setBookingMode(mode);
+          navigateToRoute('book', true);
+          showToast('Service Selected', `${mode === 'airport' ? 'Airport Shuttle' : mode === 'tourism' ? 'Tourism Package' : 'E-Hailing Ride'} pre-filled for ${targetCity}.`);
+        });
+      });
+
+      // -------------------------------------------------------------------
+      // Page 3 (#tours): City Filter Pills & Select Tour Pre-Fill
+      // -------------------------------------------------------------------
+      const tourFilterPills = document.querySelectorAll('.tour-filter-pill');
+      const tourCards = document.querySelectorAll('.tour-card');
+
+      tourFilterPills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+          const filter = pill.dataset.tourFilter;
+
+          tourFilterPills.forEach((p) => {
+            const active = p.dataset.tourFilter === filter;
+            p.setAttribute('aria-selected', String(active));
+            p.style.backgroundColor = active ? '#1d4ed8' : '#f8fafc';
+            p.style.color = active ? '#ffffff' : '#475569';
+            p.style.borderColor = active ? '#1d4ed8' : '#e2e8f0';
+          });
+
+          tourCards.forEach((card) => {
+            if (filter === 'all' || card.dataset.tourCity === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Select & Book Tour buttons (from #tours or #home)
+      document.querySelectorAll('.select-tour-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const tourName = btn.dataset.tourName;
+          const tourCity = btn.dataset.tourCity || 'Cape Town';
+          const tourRate = parseInt(btn.dataset.tourRate || '1350', 10);
+
+          setBookingCity(tourCity);
+          setBookingMode('tourism');
+
+          const tourSelect = document.getElementById('tourSelectInput');
+          if (tourSelect) {
+            for (let i = 0; i < tourSelect.options.length; i++) {
+              if (tourSelect.options[i].value === tourName) {
+                tourSelect.selectedIndex = i;
+                break;
+              }
+            }
+          }
+          selectedTourRate = tourRate;
+
+          const pickupInput = document.getElementById('pickupLocation');
+          const dropoffInput = document.getElementById('dropoffLocation');
+          if (pickupInput && !pickupInput.value.trim()) {
+            pickupInput.value = tourCity === 'Cape Town' ? 'Cape Town Hotel / V&A Waterfront' : 'Durban Hotel / Umhlanga';
+          }
+          if (dropoffInput) {
+            dropoffInput.value = tourName;
+          }
+
+          recalculateFare();
+          navigateToRoute('book', true);
+          showToast('Tour Selected', `${tourName} (${tourCity}) loaded into your booking calculator.`);
+        });
+      });
+
+      // -------------------------------------------------------------------
+      // Page 4 (#book): Interactive ZAR Fare Calculator & WhatsApp Booking
+      // -------------------------------------------------------------------
+      const bookingModeTabs = document.querySelectorAll('.booking-mode-tab');
+      const bookCityBtns = document.querySelectorAll('.book-city-btn');
+      const tourismSelectGroup = document.getElementById('tourismSelectGroup');
+      const tourSelectInput = document.getElementById('tourSelectInput');
+      const distanceControlBox = document.getElementById('distanceControlBox');
+      const kmSlider = document.getElementById('kmSlider');
+      const kmNumber = document.getElementById('kmNumber');
+      const pickupLocation = document.getElementById('pickupLocation');
+      const dropoffLocation = document.getElementById('dropoffLocation');
+      const pickupDate = document.getElementById('pickupDate');
+      const pickupTime = document.getElementById('pickupTime');
+      const quickPillCityLabel = document.getElementById('quickPillCityLabel');
+      const quickRoutePills = document.getElementById('quickRoutePills');
+
+      function renderQuickRoutePills(city) {
+        if (!quickRoutePills || !quickPillCityLabel) return;
+        quickPillCityLabel.textContent = city;
+        const routes = CITY_QUICK_ROUTES[city] || CITY_QUICK_ROUTES['Cape Town'];
+
+        quickRoutePills.innerHTML = '';
+        routes.forEach((route) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = route.label;
+          btn.style.backgroundColor = '#f8fafc';
+          btn.style.border = '1px solid #e2e8f0';
+          btn.style.color = '#0f172a';
+          btn.className = 'px-3 py-1.5 rounded-full text-[11px] font-medium hover:border-blue-700 transition-colors';
+
+          btn.addEventListener('click', () => {
+            if (route.mode && activeBookingMode === 'tourism') {
+              setBookingMode(route.mode);
+            } else if (route.mode === 'airport') {
+              setBookingMode('airport');
+            }
+            pickupLocation.value = route.pickup;
+            dropoffLocation.value = route.dropoff;
+            kmSlider.value = String(route.km);
+            kmNumber.value = String(route.km);
+            recalculateFare();
+          });
+
+          quickRoutePills.appendChild(btn);
+        });
+      }
+
+      function setBookingCity(city) {
+        activeBookingCity = city === 'Durban' ? 'Durban' : 'Cape Town';
+
+        bookCityBtns.forEach((btn) => {
+          const isSelected = btn.dataset.bookCity === activeBookingCity;
+          btn.style.backgroundColor = isSelected ? '#eff6ff' : '#ffffff';
+          btn.style.borderColor = isSelected ? '#1d4ed8' : '#cbd5e1';
+          btn.style.color = isSelected ? '#1d4ed8' : '#0f172a';
+          btn.style.fontWeight = isSelected ? '700' : '600';
+        });
+
+        // Update input placeholders for Cape Town vs Durban
+        if (activeBookingCity === 'Cape Town') {
+          pickupLocation.placeholder = 'e.g. V&A Waterfront / Sea Point';
+          dropoffLocation.placeholder = 'e.g. Cape Town International Airport (CPT)';
+        } else {
+          pickupLocation.placeholder = 'e.g. Umhlanga Rocks / Durban Beachfront';
+          dropoffLocation.placeholder = 'e.g. King Shaka International Airport (DUR)';
+        }
+
+        // If in tourism mode, match first tour of that city if current doesn't match
+        if (activeBookingMode === 'tourism' && tourSelectInput) {
+          const currentOpt = tourSelectInput.options[tourSelectInput.selectedIndex];
+          if (currentOpt && currentOpt.dataset.city !== activeBookingCity) {
+            for (let i = 0; i < tourSelectInput.options.length; i++) {
+              if (tourSelectInput.options[i].dataset.city === activeBookingCity) {
+                tourSelectInput.selectedIndex = i;
+                selectedTourRate = parseInt(tourSelectInput.options[i].dataset.rate || '1150', 10);
+                dropoffLocation.value = tourSelectInput.options[i].value;
+                break;
+              }
+            }
+          }
+        }
+
+        renderQuickRoutePills(activeBookingCity);
+        recalculateFare();
+      }
+
+      function setBookingMode(mode) {
+        activeBookingMode = mode;
+
+        bookingModeTabs.forEach((tab) => {
+          const isSelected = tab.dataset.bookingMode === mode;
+          tab.setAttribute('aria-selected', String(isSelected));
+          tab.style.backgroundColor = isSelected ? '#1d4ed8' : 'transparent';
+          tab.style.color = isSelected ? '#ffffff' : '#475569';
+        });
+
+        if (mode === 'tourism') {
+          tourismSelectGroup.classList.remove('hidden');
+          distanceControlBox.classList.add('hidden');
+          if (tourSelectInput) {
+            const opt = tourSelectInput.options[tourSelectInput.selectedIndex];
+            selectedTourRate = parseInt(opt.dataset.rate || '1350', 10);
+            if (opt.dataset.city && opt.dataset.city !== activeBookingCity) {
+              setBookingCity(opt.dataset.city);
+            }
+            dropoffLocation.value = opt.value;
+          }
+        } else {
+          tourismSelectGroup.classList.add('hidden');
+          distanceControlBox.classList.remove('hidden');
+          if (mode === 'airport') {
+            kmSlider.value = '19';
+            kmNumber.value = '19';
+            if (!dropoffLocation.value.trim()) {
+              dropoffLocation.value = activeBookingCity === 'Cape Town'
+                ? 'Cape Town International Airport (CPT)'
+                : 'King Shaka International Airport (DUR)';
+            }
+          }
+        }
+
+        recalculateFare();
+      }
+
+      bookingModeTabs.forEach((tab) => {
+        tab.addEventListener('click', () => setBookingMode(tab.dataset.bookingMode));
+      });
+
+      bookCityBtns.forEach((btn) => {
+        btn.addEventListener('click', () => setBookingCity(btn.dataset.bookCity));
+      });
+
+      if (tourSelectInput) {
+        tourSelectInput.addEventListener('change', () => {
+          const opt = tourSelectInput.options[tourSelectInput.selectedIndex];
+          selectedTourRate = parseInt(opt.dataset.rate || '1350', 10);
+          dropoffLocation.value = opt.value;
+          if (opt.dataset.city && opt.dataset.city !== activeBookingCity) {
+            setBookingCity(opt.dataset.city);
+          } else {
+            recalculateFare();
+          }
+        });
+      }
+
+      // Synchronize KM Slider & Numeric Input
+      if (kmSlider && kmNumber) {
+        kmSlider.addEventListener('input', () => {
+          kmNumber.value = kmSlider.value;
+          recalculateFare();
+        });
+        kmNumber.addEventListener('input', () => {
+          let val = parseInt(kmNumber.value || '1', 10);
+          if (isNaN(val) || val < 1) val = 1;
+          if (val > 150) val = 150;
+          kmSlider.value = String(val);
+          recalculateFare();
+        });
+      }
+
+      // Vehicle Class Radio Styling & Recalculation
+      const tierRadios = document.querySelectorAll('.tier-radio');
+      tierRadios.forEach((radio) => {
+        radio.addEventListener('change', () => {
+          document.querySelectorAll('.tier-box').forEach((box) => {
+            box.style.backgroundColor = '#ffffff';
+            box.style.borderColor = '#cbd5e1';
+          });
+          const activeBox = radio.parentElement.querySelector('.tier-box');
+          if (activeBox) {
+            activeBox.style.backgroundColor = '#eff6ff';
+            activeBox.style.borderColor = '#1d4ed8';
+          }
+          recalculateFare();
+        });
+      });
+
+      [pickupDate, pickupTime, pickupLocation, dropoffLocation].forEach((el) => {
+        if (el) el.addEventListener('input', recalculateFare);
+      });
+
+      function getSelectedVehicle() {
+        const checked = document.querySelector('input[name="vehicleTier"]:checked');
+        return {
+          label: checked ? checked.value : 'Standard Sedan (1–4 Pax)',
+          mult: checked ? parseFloat(checked.dataset.mult || '1.0') : 1.0
+        };
+      }
+
+      function recalculateFare() {
+        const vehicle = getSelectedVehicle();
+        const km = Math.max(1, Math.min(150, parseInt(kmSlider.value || '18', 10)));
+        let totalZar = 0;
+        let serviceLabel = 'E-Hailing Ride';
+        let scopeLabel = `${km} km`;
+
+        if (activeBookingMode === 'ehailing') {
+          serviceLabel = 'E-Hailing Ride';
+          // R50 base + R10/km, minimum R120
+          const raw = (50 + km * 10) * vehicle.mult;
+          totalZar = Math.max(120, Math.round(raw / 10) * 10);
+        } else if (activeBookingMode === 'airport') {
+          serviceLabel = `Airport Shuttle (${activeBookingCity === 'Cape Town' ? 'CPT' : 'DUR'})`;
+          // R180 airport meet & greet base + R11/km, minimum R350
+          const raw = (180 + km * 11) * vehicle.mult;
+          totalZar = Math.max(350, Math.round(raw / 10) * 10);
+        } else {
+          serviceLabel = 'Private Tourism Package';
+          const opt = tourSelectInput ? tourSelectInput.options[tourSelectInput.selectedIndex] : null;
+          scopeLabel = opt ? opt.value : 'Scenic Day Tour';
+          totalZar = Math.round((selectedTourRate * vehicle.mult) / 10) * 10;
+        }
+
+        const formattedFare = 'R' + totalZar.toLocaleString('en-ZA');
+        const dateVal = pickupDate && pickupDate.value ? pickupDate.value : 'Flexible Date';
+        const timeVal = pickupTime && pickupTime.value ? pickupTime.value : 'Flexible Time';
+
+        document.getElementById('summaryServiceTitle').textContent = serviceLabel;
+        document.getElementById('summaryCityBadge').textContent = activeBookingCity;
+        document.getElementById('summaryCityText').textContent = activeBookingCity;
+        document.getElementById('summaryVehicleText').textContent = vehicle.label;
+        document.getElementById('summaryDistanceText').textContent = scopeLabel;
+        document.getElementById('summaryScheduleText').textContent = `${dateVal} at ${timeVal}`;
+        document.getElementById('estimatedFareTotal').textContent = formattedFare;
+
+        return {
+          serviceLabel,
+          city: activeBookingCity,
+          vehicle: vehicle.label,
+          scopeLabel,
+          pickup: pickupLocation.value.trim() || `${activeBookingCity} Pickup`,
+          dropoff: dropoffLocation.value.trim() || `${activeBookingCity} Destination`,
+          schedule: `${dateVal} at ${timeVal}`,
+          formattedFare
+        };
+      }
+
+      function buildBookingSummaryText() {
+        const d = recalculateFare();
+        return [
+          `Hello S&S Super Serve Transport Solutions! I would like to book a trip:`,
+          `• Service: ${d.serviceLabel}`,
+          `• City: ${d.city}`,
+          `• Pickup: ${d.pickup}`,
+          `• Drop-off / Tour: ${d.dropoff}`,
+          `• Date & Time: ${d.schedule}`,
+          `• Vehicle Class: ${d.vehicle}`,
+          `• Trip Scope: ${d.scopeLabel}`,
+          `• Estimated Fare: ${d.formattedFare}`
+        ].join('\n');
+      }
+
+      // Preview Booking Summary Toggle
+      const previewSummaryBtn = document.getElementById('previewSummaryBtn');
+      const bookingPreviewBox = document.getElementById('bookingPreviewBox');
+      const bookingPreviewText = document.getElementById('bookingPreviewText');
+      const closePreviewBoxBtn = document.getElementById('closePreviewBoxBtn');
+
+      if (previewSummaryBtn && bookingPreviewBox && bookingPreviewText) {
+        previewSummaryBtn.addEventListener('click', () => {
+          bookingPreviewText.textContent = buildBookingSummaryText();
+          bookingPreviewBox.classList.remove('hidden');
+        });
+      }
+      if (closePreviewBoxBtn && bookingPreviewBox) {
+        closePreviewBoxBtn.addEventListener('click', () => {
+          bookingPreviewBox.classList.add('hidden');
+        });
+      }
+
+      // Send Booking via WhatsApp (084 034 3702)
+      const bookWhatsappBtn = document.getElementById('bookWhatsappBtn');
+      if (bookWhatsappBtn) {
+        bookWhatsappBtn.addEventListener('click', () => {
+          const message = buildBookingSummaryText();
+          const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+          showToast('Opening WhatsApp', 'Forwarding your Cape Town / Durban booking details to 084 034 3702.');
+          window.open(url, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // Page 5 (#careers): Shuttle Driver Application Form -> WhatsApp
+      // -------------------------------------------------------------------
+      const driverCareerForm = document.getElementById('driverCareerForm');
+      if (driverCareerForm) {
+        driverCareerForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const fullName = document.getElementById('driverFullName').value.trim();
+          const cityBase = document.getElementById('driverCityBase').value;
+          const suburb = document.getElementById('driverResidence').value.trim();
+          const licenseCode = document.getElementById('driverLicenseType').value;
+          const pdpStatus = document.getElementById('driverPdpStatus').value;
+          const cvChecked = document.getElementById('driverCvReminder').checked;
+
+          if (!fullName) {
+            showToast('Name Required', 'Please enter your Full Name & Surname before sending your driver application.');
+            document.getElementById('driverFullName').focus();
+            return;
+          }
+          if (!suburb) {
+            showToast('Suburb Required', 'Please enter your Area / Suburb in Cape Town or Durban.');
+            document.getElementById('driverResidence').focus();
+            return;
+          }
+          if (!cvChecked) {
+            showToast('CV Reminder', 'Please tick the CV attachment confirmation box so you remember to attach your CV in WhatsApp.');
+            return;
+          }
+
+          const appMessage = [
+            `Hello S&S Super Serve Transport Solutions! I am applying for the Shuttle Driver position:`,
+            `• Full Name & Surname: ${fullName}`,
+            `• Operating Base City: ${cityBase}`,
+            `• Area / Suburb: ${suburb}`,
+            `• Driver's License: ${licenseCode}`,
+            `• PDP Status: ${pdpStatus}`,
+            `• Note: Attaching my CV now.`
+          ].join('\n');
+
+          const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(appMessage)}`;
+          showToast('Application Ready', 'Opening WhatsApp (084 034 3702) — please attach your CV in the chat.');
+          window.open(waUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      // Initialize default city routes, fare calculator & initial hash route
+      renderQuickRoutePills('Cape Town');
+      recalculateFare();
+      const initialHash = window.location.hash.replace('#', '').trim().toLowerCase();
+      navigateToRoute(VALID_ROUTES.includes(initialHash) ? initialHash : 'home', false);
+    });
+  </script>
+</body>
+</html>
